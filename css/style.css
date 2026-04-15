@@ -1,11 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
-/* font-family: "Noto Sans KR", sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+/* font-family: "Gowun Dodum", sans-serif; */
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap");
-/* font-family: "Noto Serif KR", serif; */
-
-@import url("https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&display=swap");
-/* font-family: "Kapakana", cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+/* font-family: "Italiana", sans-serif; */
 
 /* body {
   max-width: 1920px;
@@ -17,7 +14,7 @@
 html {
   height: 100%;
   background: #ffffff;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -28,19 +25,19 @@ body {
   color: #333;
 }
 
-.guideline,
+/* .guideline,
 .preparation,
 .intro {
   width: 100%;
   max-width: 620px;
   margin: 0 auto;
-  /* background: rgb(175, 175, 175); */
+  background: rgb(175, 175, 175);
 }
 .wrep {
   width: 100%;
   margin: 0 auto;
-  /* border: 2px solid white; */
-}
+  border: 2px solid white;
+} */
 .main,
 section,
 .intro {
@@ -62,7 +59,7 @@ section {
 /* visual */
 .visual {
   height: 1300px;
-  background: url("../img/visual_bg.png") no-repeat center bottom;
+  background: url("../img/visual_bg.png") no-repeat center top;
   background-size: cover;
 
   display: flex;
@@ -81,7 +78,7 @@ section {
 }
 .visual .top_pont .tt span {
   font-size: 20px;
-  font-weight: 500;
+  /* font-weight: 500; */
   color: #fff;
   text-shadow: 1.5px 2px 3px rgb(73, 73, 73);
 
@@ -110,7 +107,7 @@ section {
 }
 .visual h2 {
   font-size: 130px;
-  font-weight: 500;
+  /* font-weight: 500; */
   color: #7c083e;
   font-family: "Kapakana", cursive;
   text-shadow: 1.5px 2px 10px rgb(73, 73, 73);
@@ -130,12 +127,12 @@ section {
 }
 .visual .title h3 {
   font-size: 26px;
-  font-weight: 500;
+  /* font-weight: 500; */
   color: #fff;
 }
 .visual .title p {
   font-size: 20px;
-  font-weight: 400;
+  /* font-weight: 400; */
   color: #fff;
   margin-top: 12px;
 }
@@ -162,12 +159,12 @@ section {
 }
 .greeting .top span {
   font-size: 22px;
-  font-weight: 400;
-  line-height: 1.35;
+  /* font-weight: 400; */
+  line-height: 1.8;
 }
 .greeting .top strong {
   font-size: 24px;
-  font-weight: 600;
+  /* font-weight: 500; */
   margin-top: 16px;
 }
 
@@ -183,23 +180,20 @@ section {
 }
 .greeting .btm span {
   font-size: 22px;
-  font-weight: 500;
-  line-height: 1.35;
+  line-height: 1.8;
   display: inline-block;
 }
 .greeting .btm h2 {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 400;
   margin-top: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Noto Serif KR", serif;
 }
 .greeting .btm h2 span {
-  font-size: 18px;
-  font-weight: 600;
-  margin-right: 5px;
+  font-size: 16px;
+  margin-right: 8px;
   margin-bottom: -2px;
   display: inline-block;
 }
@@ -223,19 +217,22 @@ section {
   padding: 100px 0;
 }
 .calendar_cont .title,
-.gallery .title {
+.gallery .title,
+.contact .title {
   text-align: center;
 }
 .calendar_cont .title h2,
-.gallery .title h2 {
+.gallery .title h2,
+.contact .title h2 {
   font-size: 42px;
-  font-weight: 200;
-  font-family: "Noto Serif KR", serif;
+  /* font-weight: 200; */
+  font-family: "Italiana", sans-serif;
 }
 .calendar_cont .title p,
-.gallery .title p {
+.gallery .title p,
+.contact .title p {
   font-size: 22px;
-  font-weight: 500;
+  /* font-weight: 500; */
 
   margin: 52px 0 16px;
 }
@@ -248,7 +245,7 @@ section {
 } */
 .calendar_cont .title span {
   font-size: 24px;
-  font-weight: 600;
+  /* font-weight: 500; */
   color: #333333;
   animation: load_tr 7s infinite linear;
   display: block;
@@ -298,7 +295,7 @@ section {
   align-items: center;
 
   font-size: 18px;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 .calendar_desc ul li.red {
   color: rgb(250, 127, 127);
@@ -335,11 +332,11 @@ section {
 }
 #countdown .calendar_item h2 {
   font-size: 38px;
-  font-weight: 400;
+  /* font-weight: 400; */
 }
 #countdown .calendar_item span {
   font-size: 15px;
-  font-weight: 400;
+  /* font-weight: 400; */
   color: #7c7c7c;
   display: block;
   margin-top: 12px;
@@ -351,7 +348,7 @@ section {
 }
 .calendar .comment h4 {
   font-size: 22px;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 .calendar .comment h4 span {
   color: #e35a96;
@@ -360,47 +357,45 @@ section {
 /* gallery */
 .gallery {
   padding: 100px 0;
+  background: #f1efed;
 }
 .gallery .title {
 }
 .gallery .title h2 {
 }
-.gallery .title p {
+.gallery .title p,
+.contact .title p {
   margin: 26px 0 0;
 }
-
-/* 초기 상태 (3줄까지만 보이기) */
 .gallery_cont {
-  width: 85%;
   margin: 52px auto;
   overflow: hidden;
-  max-height: 636px; /* (200px * 3) + gap/margin 고려 */
+  max-height: 636px;
   transition: max-height 0.6s ease;
 }
-
-/* 펼쳐졌을 때 */
 .gallery_cont.active {
-  max-height: 3000px; /* 충분히 크게 */
+  max-height: 3000px;
 }
 
 .gallery_cont .desc {
   width: 100%;
   height: 200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 12px;
+  /* gap: 12px; */
   margin-bottom: 12px;
 }
 .gallery_cont .desc.desc10 {
   margin: 0;
 }
 .gallery_cont .desc .item {
-  flex: 1;
+  width: 26%;
   height: 100%;
   border-radius: 10px;
-  box-shadow: 1.5px 2px 10px rgba(73, 73, 73, 0.3);
-  /* background: pink; */
+}
+.gallery_cont .desc .item:nth-child(2) {
+  margin: 0 12px;
 }
 .gallery_cont .desc .item img {
   width: 100%;
@@ -408,160 +403,22 @@ section {
   display: block;
   font-size: 0;
   object-fit: cover;
+  border-radius: 10px;
 }
-/* .gallery_cont .desc .item.gallery_img01 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img02 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img03 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img04 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img05 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img06 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img07 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img08 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img09 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img10 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
+.gallery_more {
+  width: 130px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #e35a96;
+  border-radius: 12px;
+  margin: 0 auto;
 
-.gallery_cont .desc .item.gallery_img11 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
+  font-size: 16px;
+  /* font-weight: 500; */
+  color: #e35a96;
 }
-.gallery_cont .desc .item.gallery_img12 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img13 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img14 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img15 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img16 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img17 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img18 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img19 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img20 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-
-.gallery_cont .desc .item.gallery_img21 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img22 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img23 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img24 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img25 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img26 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img27 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img28 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img29 {
-  background: url("")
-    no-repeat center center;
-  background-size: cover;
-}
-.gallery_cont .desc .item.gallery_img30 {
-  background-size: cover;
-
-  box-shadow: none;
-} */
-
 .lightbox {
   position: fixed;
   top: 0;
@@ -636,6 +493,49 @@ section {
   color: #fff;
   cursor: pointer;
 }
+.lightbox_track {
+  display: flex;
+  width: 100%;
+  height: 80%;
+}
+
+.lightbox_slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox_slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.lightbox_counter {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 16px;
+}
+
+/* contact */
+.contact {
+}
+.contact .map {
+  width: 100%;
+}
+.contact .map .root_daum_roughmap {
+  width: 100% !important;
+}
+.contact .map .root_daum_roughmap .section_address,
+.contact .map .wrap_controllers,
+.contact .map .wrap_btn_zoom {
+  display: none;
+}
 
 @media all and (min-width: 360px) and (max-width: 620px) {
   /* visual */
@@ -653,8 +553,8 @@ section {
     height: 6vw;
   }
   .visual h2 {
-    font-size: 23vw;
-    top: 20vw;
+    font-size: 21vw;
+    top: 15vw;
   }
   .visual .title {
     margin: 0 auto 6vw;
@@ -709,12 +609,18 @@ section {
   .calendar_cont {
     padding: 12vw 0;
   }
-  .calendar_cont .title {
+  .calendar_cont .title,
+  .gallery .title,
+  .contact .title {
   }
-  .calendar_cont .title h2 {
+  .calendar_cont .title h2,
+  .gallery .title h2,
+  .contact .title h2 {
     font-size: 8vw;
   }
-  .calendar_cont .title p {
+  .calendar_cont .title p,
+  .gallery .title p,
+  .contact .title p {
     font-size: 4vw;
     margin: 6vw 0 2vw;
   }
@@ -724,7 +630,7 @@ section {
     margin: 0 0.5vw;
   }
   .calendar_cont .title span {
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
 
   .calendar_desc {
@@ -760,7 +666,7 @@ section {
     gap: 3.5vw;
   }
   #countdown .calendar_item {
-    height: 25vw;
+    height: 20vw;
 
     border-radius: 12px;
   }
@@ -779,5 +685,44 @@ section {
     font-size: 4vw;
   }
   .calendar .comment h4 span {
+  }
+  /* gallery */
+  .gallery {
+    padding: 18vw 0;
+    background: #f1efed;
+  }
+  .gallery .title {
+  }
+  .gallery .title h2 {
+  }
+  .gallery .title p,
+  .contact .title p {
+    margin: 3vw 0 0;
+  }
+  .gallery_cont {
+    margin: 52px auto;
+  }
+
+  .gallery_cont .desc {
+    width: 100%;
+  }
+  .gallery_cont .desc.desc10 {
+    margin: 0;
+  }
+  .gallery_cont .desc .item {
+    width: 28%;
+    height: 100%;
+  }
+  .gallery_cont .desc .item:nth-child(2) {
+  }
+  .gallery_cont .desc .item img {
+    border-radius: 10px;
+  }
+  .gallery_more {
+    width: 130px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
   }
 }

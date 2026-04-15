@@ -366,35 +366,35 @@
 
             <div class="gallery_cont">
               <div class="desc desc01">
-                <a href="#" class="item gallery_img01">
+                <a href="#" class="item gallery_img01 ani t-delay0_2">
                   <img src="gallery01/gallery_img01.png" alt="" />
                 </a>
-                <a href="#" class="item gallery_img02">
+                <a href="#" class="item gallery_img02 ani t-delay0_3">
                   <img src="gallery01/gallery_img02.png" alt="" />
                 </a>
-                <a href="#" class="item gallery_img03">
+                <a href="#" class="item gallery_img03 ani t-delay0_4">
                   <img src="gallery01/gallery_img03.png" alt="" />
                 </a>
               </div>
               <div class="desc desc02">
-                <a href="#" class="item gallery_img04">
+                <a href="#" class="item gallery_img04 ani t-delay0_5">
                   <img src="gallery01/gallery_img04.png" alt="" />
                 </a>
-                <a href="#" class="item gallery_img05">
+                <a href="#" class="item gallery_img05 ani t-delay0_6">
                   <img src="gallery01/gallery_img05.png" alt="" />
                 </a>
-                <a href="#" class="item gallery_img06">
+                <a href="#" class="item gallery_img06 ani t-delay0_7">
                   <img src="gallery02/gallery_img06.png" alt="" />
                 </a>
               </div>
               <div class="desc desc03">
-                <a href="#" class="item gallery_img07">
+                <a href="#" class="item gallery_img07 ani t-delay0_8">
                   <img src="gallery02/gallery_img07.png" alt="" />
                 </a>
-                <a href="#" class="item gallery_img08">
+                <a href="#" class="item gallery_img08 ani t-delay0_9">
                   <img src="gallery02/gallery_img08.png" alt="" />
                 </a>
-                <a href="#" class="item gallery_img09">
+                <a href="#" class="item gallery_img09 ani t-delay1">
                   <img src="gallery02/gallery_img09.png" alt="" />
                 </a>
               </div>
@@ -472,11 +472,8 @@
                   <img src="gallery06/gallery_img29.png" alt="" />
                 </a>
                 <!-- <a href="#" class="item gallery_img30">
-                  <img src="" alt="">
+                  <img src="gallery06/gallery_img29.png" alt="" />
                 </a> -->
-                <div class="item gallery_img30">
-                  <img src="" alt="" />
-                </div>
               </div>
             </div>
 
@@ -505,6 +502,27 @@
 
             <script>
               document.addEventListener("DOMContentLoaded", function () {
+                /* =======================
+                  1. 더보기 기능
+                ======================= */
+                const moreBtn = document.querySelector(".gallery_more");
+                const gallery = document.querySelector(".gallery_cont");
+
+                if (moreBtn && gallery) {
+                  moreBtn.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    gallery.classList.toggle("active");
+
+                    moreBtn.innerText = gallery.classList.contains("active")
+                      ? "접기"
+                      : "더보기";
+                  });
+                }
+
+                /* =======================
+                  2. 라이트박스 슬라이드
+                ======================= */
                 const items = document.querySelectorAll(".gallery .item");
                 const lightbox = document.getElementById("lightbox");
                 const track = document.querySelector(".lightbox_track");
@@ -512,77 +530,135 @@
                 const prevBtn = document.querySelector(".lightbox .prev");
                 const nextBtn = document.querySelector(".lightbox .next");
 
-                let currentIndex = 0;
-                let startX = 0;
-
                 if (!items.length || !track) return;
 
-                // ⭐ img 태그에서 src 가져오기
-                const images = Array.from(items)
-                  .map((item) => {
-                    const img = item.querySelector("img");
-                    return img ? img.src : null;
-                  })
-                  .filter(Boolean); // null 제거
+                let currentIndex = 1;
+                let startX = 0;
 
-                // ⭐ 슬라이드 생성
+                /* =======================
+                  ⭐ img 있는 것만 필터
+                ======================= */
+                const validItems = Array.from(items).filter(
+                  (item) => item.querySelector("img")?.src,
+                );
+
+                const images = validItems.map(
+                  (item) => item.querySelector("img").src,
+                );
+
+                /* =======================
+                  ⭐ 슬라이드 생성 (클론 포함)
+                ======================= */
+                track.innerHTML = "";
+
+                // 마지막 → 앞
+                const firstClone = document.createElement("div");
+                firstClone.classList.add("lightbox_slide");
+                firstClone.innerHTML = `<img src="${images[images.length - 1]}" draggable="false">`;
+                track.appendChild(firstClone);
+
+                // 원본
                 images.forEach((src) => {
                   const slide = document.createElement("div");
                   slide.classList.add("lightbox_slide");
-
-                  // img 태그로 넣기
                   slide.innerHTML = `<img src="${src}" draggable="false">`;
-
                   track.appendChild(slide);
                 });
 
-                function updateSlide() {
-                  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                // 첫번째 → 뒤
+                const lastClone = document.createElement("div");
+                lastClone.classList.add("lightbox_slide");
+                lastClone.innerHTML = `<img src="${images[0]}" draggable="false">`;
+                track.appendChild(lastClone);
+
+                /* =======================
+                  ⭐ 카운터 생성
+                ======================= */
+                const counter = document.createElement("div");
+                counter.classList.add("lightbox_counter");
+                lightbox.appendChild(counter);
+
+                function updateCounter() {
+                  let realIndex = currentIndex - 1;
+
+                  if (currentIndex === 0) realIndex = images.length - 1;
+                  if (currentIndex === images.length + 1) realIndex = 0;
+
+                  counter.innerText = `${realIndex + 1} / ${images.length}`;
                 }
 
-                // 열기
-                items.forEach((item, index) => {
+                function updateSlide(animate = true) {
+                  track.style.transition = animate
+                    ? "transform 0.4s ease"
+                    : "none";
+                  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                  updateCounter();
+                }
+
+                /* =======================
+                  열기
+                ======================= */
+                validItems.forEach((item, index) => {
                   item.addEventListener("click", function (e) {
                     e.preventDefault();
-                    currentIndex = index;
-                    updateSlide();
+                    currentIndex = index + 1;
+                    updateSlide(false);
                     lightbox.style.display = "flex";
                   });
                 });
 
-                // 이전
-                prevBtn.addEventListener("click", () => {
-                  currentIndex =
-                    (currentIndex - 1 + images.length) % images.length;
-                  updateSlide();
-                });
-
-                // 다음
+                /* =======================
+                  다음
+                ======================= */
                 nextBtn.addEventListener("click", () => {
-                  currentIndex = (currentIndex + 1) % images.length;
+                  currentIndex++;
                   updateSlide();
+
+                  if (currentIndex === images.length + 1) {
+                    setTimeout(() => {
+                      currentIndex = 1;
+                      updateSlide(false);
+                    }, 400);
+                  }
                 });
 
-                // 닫기
+                /* =======================
+                  이전
+                ======================= */
+                prevBtn.addEventListener("click", () => {
+                  currentIndex--;
+                  updateSlide();
+
+                  if (currentIndex === 0) {
+                    setTimeout(() => {
+                      currentIndex = images.length;
+                      updateSlide(false);
+                    }, 400);
+                  }
+                });
+
+                /* =======================
+                  닫기
+                ======================= */
                 closeBtn.addEventListener("click", () => {
                   lightbox.style.display = "none";
                 });
 
-                // 배경 클릭 닫기
                 lightbox.addEventListener("click", (e) => {
                   if (e.target === lightbox) {
                     lightbox.style.display = "none";
                   }
                 });
 
-                // ESC 닫기
                 document.addEventListener("keydown", (e) => {
                   if (e.key === "Escape") {
                     lightbox.style.display = "none";
                   }
                 });
 
-                /* ⭐ 스와이프 */
+                /* =======================
+                  ⭐ 스와이프
+                ======================= */
                 lightbox.addEventListener("touchstart", (e) => {
                   startX = e.touches[0].clientX;
                 });
@@ -591,12 +667,26 @@
                   const endX = e.changedTouches[0].clientX;
 
                   if (startX - endX > 50) {
-                    currentIndex = (currentIndex + 1) % images.length;
-                    updateSlide();
+                    currentIndex++;
                   } else if (endX - startX > 50) {
-                    currentIndex =
-                      (currentIndex - 1 + images.length) % images.length;
-                    updateSlide();
+                    currentIndex--;
+                  }
+
+                  updateSlide();
+
+                  // 경계 처리
+                  if (currentIndex === images.length + 1) {
+                    setTimeout(() => {
+                      currentIndex = 1;
+                      updateSlide(false);
+                    }, 400);
+                  }
+
+                  if (currentIndex === 0) {
+                    setTimeout(() => {
+                      currentIndex = images.length;
+                      updateSlide(false);
+                    }, 400);
                   }
                 });
               });
@@ -613,11 +703,41 @@
             <button class="next">&#10095;</button>
           </div>
 
-          <!-- sec05 계좌 -->
-          <section class="sec06 account"></section>
+          <!-- sec06 오시는길 -->
+          <section class="sec06 contact">
+            <div class="title">
+              <h2 class="ani_O t-delay0_3">location</h2>
 
-          <!-- sec06 location -->
-          <section class="sec07 location"></section>
+              <p class="ani_O t-delay0_4">
+                사진을 클릭하시면 전체 화면 보기가 가능합니다.
+              </p>
+            </div>
+
+            <div class="map">
+              <div
+                id="daumRoughmapContainer1776268335502"
+                class="root_daum_roughmap root_daum_roughmap_landing"
+              ></div>
+
+              <script
+                charset="UTF-8"
+                class="daum_roughmap_loader_script"
+                src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+              ></script>
+
+              <script charset="UTF-8">
+                new daum.roughmap.Lander({
+                  timestamp: "1776268335502",
+                  key: "m5xcwe9gpxz",
+                  // mapWidth: "100%",
+                  mapHeight: "260",
+                }).render();
+              </script>
+            </div>
+          </section>
+
+          <!-- sec07 계좌 -->
+          <section class="sec07 account"></section>
         </main>
 
         <!-- footer finish -->
