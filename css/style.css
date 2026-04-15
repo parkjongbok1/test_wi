@@ -553,7 +553,7 @@ section {
     height: 6vw;
   }
   .visual h2 {
-    font-size: 21vw;
+    font-size: 18vw;
     top: 15vw;
   }
   .visual .title {
@@ -636,18 +636,19 @@ section {
   .calendar_desc {
     width: 85%;
     margin: 7.5vw auto;
+    border: 0.5px solid #dbdbdb;
     border-left: none;
     border-right: none;
   }
   .calendar_desc ul {
     width: 95%;
-    margin: 0 auto 2.5vw;
+    margin: 0 auto 4vw;
   }
   .calendar_desc ul:last-child {
-    margin: 2.5vw auto 3vw;
+    margin: 4vw auto 3vw;
   }
   .calendar_desc ul:first-child {
-    margin: 3vw auto 2.5vw;
+    margin: 3vw auto 4vw;
   }
   .calendar_desc ul li {
     width: 8vw;
