@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 기존 메타 -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+
+    <!-- 뉴 메타 -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
     <title>박종복 ♥ 신지수 결혼합니다!</title>
 
@@ -46,6 +54,30 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     />
 
+    <style>
+      /* 텍스트 선택 및 드래그 방지 */
+      * {
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        -webkit-touch-callout: none !important;
+      }
+
+      /* 이미지 드래그 방지 */
+      img {
+        -webkit-user-drag: none !important;
+        pointer-events: none !important;
+      }
+
+      /* 인쇄 방지 */
+      @media print {
+        body {
+          display: none !important;
+        }
+      }
+    </style>
+
     <!-- 기존 JS -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
@@ -57,59 +89,19 @@
     <!-- 본 모바일 청첩장 레이아웃 -->
     <div class="guideline">
       <div class="wrep">
-        <!-- <header class="header">
-          <div class="inner">
-            <div class="menuBtn head_link">
-              <div>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="meun-bar">
-            <ul id="menu-box" class="menu-box">
-              <li>
-                <a href="#">menu1</a>
-              </li>
-              <li>
-                <a href="#">menu2</a>
-              </li>
-              <li>
-                <a href="#">menu3</a>
-              </li>
-              <li>
-                <a href="#">menu4</a>
-              </li>
-              <li>
-                <a href="#">menu5</a>
-              </li>
-            </ul>
-          </div>
-        </header> -->
-
         <!-- main -->
         <main class="main wrapper">
           <!-- sec01 비주얼 -->
           <section class="sec01 visual">
-            <div class="top_pont">
-              <div class="tt">
-                <span>2026.06.27 SAT 12:10 PM</span>
-              </div>
-              <div class="bgm"></div>
-            </div>
-
-            <h2>
-              Our forever <br />
-              begins today
-            </h2>
+            <div class="bgm"></div>
 
             <div class="title">
-              <h3>박종복ㆍ신지수</h3>
-              <p>소중한 분들을 결혼식에 초대합니다!</p>
+              <strong>2026.06.27 SAT 12:10 PM</strong>
+              <h2>
+                We are <br />
+                getting married
+              </h2>
+              <p>신랑 박종복 ♥ 신부 신지수</p>
             </div>
           </section>
 
@@ -224,13 +216,165 @@
             </div>
           </section>
 
-          <!-- sec03 달력 -->
-          <section class="sec03 calendar">
+          <!-- sec03 연락 -->
+          <section class="sec03 liaison">
+            <div class="title">
+              <h2 class="ani_O t-delay0_3">liaison</h2>
+
+              <p class="ani_O t-delay0_4">전화로 축하 인사하기</p>
+
+              <span class="ani_O t-delay0_5">
+                축하 인사를 전하실 분들을 위해 연락처를 남깁니다.<br />
+                신랑·신부와 부모님께 편하게 연락해 주세요.<br />
+                여러분께서 보내주시는 소중한 마음,<br />
+                깊이 간직하며 행복하게 잘 살겠습니다.
+              </span>
+            </div>
+
+            <div class="desc">
+              <div class="items ani t-delay0_6">
+                <div class="top_name">
+                  <h3>신랑측</h3>
+                  <span class="arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+                <ul>
+                  <li class="liaison_item liaison_item01">
+                    <h4>신랑<span>박종복</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01042903048" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01042903048?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="liaison_item liaison_item02">
+                    <h4>아버지<span>박갑수</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01022023048" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01022023048?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="liaison_item liaison_item03">
+                    <h4>어머니<span>노영미</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01057104982" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01057104982?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="items ani t-delay0_7">
+                <div class="top_name">
+                  <h3>신부측</h3>
+                  <span class="arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <ul>
+                  <li class="liaison_item liaison_item04">
+                    <h4>신부<span>신지수</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01092095337" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01092095337?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="liaison_item liaison_item05">
+                    <h4>아버지<span>신명준</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01057579943" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01057579943?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="liaison_item liaison_item06">
+                    <h4>어머니<span>오세연</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01030305716" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01030305716?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const liaisonItems =
+                  document.querySelectorAll(".liaison .items");
+
+                liaisonItems.forEach((item) => {
+                  const header = item.querySelector(".top_name");
+
+                  header.addEventListener("click", () => {
+                    item.classList.toggle("active");
+                  });
+                });
+              });
+            </script>
+          </section>
+
+          <!-- sec04 달력 -->
+          <section class="sec04 calendar">
             <div class="banner01 ani_O t-delay0_2"></div>
 
             <div class="calendar_cont">
               <div class="title">
-                <h2 class="ani_O t-delay0_3">WEDDING DAY</h2>
+                <h2 class="ani_O t-delay0_3">Wedding Day</h2>
 
                 <p class="ani_O t-delay0_4">
                   2026년 6월 27일 토요일, 오후 12시 10분
@@ -351,15 +495,10 @@
             <div class="banner02 ani_O t-delay0_4"></div>
           </section>
 
-          <!-- sec04 연락 -->
-          <section class="sec04 liaison">
-            <!--  -->
-          </section>
-
           <!-- sec05 갤러리 -->
           <section class="sec05 gallery">
             <div class="title">
-              <h2 class="ani_O t-delay0_3">GALLERY</h2>
+              <h2 class="ani_O t-delay0_3">Gallery</h2>
 
               <p class="ani_O t-delay0_4">
                 사진을 클릭하시면 전체 화면 보기가 가능합니다.
@@ -467,36 +606,9 @@
                   <img src="gallery06/gallery_img29.png" alt="" />
                 </a>
               </div>
-              <!-- <div class="desc desc10">
-                <a href="#" class="item gallery_img28"> </a>
-                <a href="#" class="item gallery_img29"> </a>
-                <a href="#" class="item gallery_img30">
-                  <img src="gallery06/gallery_img29.png" alt="" />
-                </a> 
-              </div>-->
             </div>
+
             <a href="#" class="gallery_more">더보기</a>
-
-            <script>
-              const moreBtn = document.querySelector(".gallery_more");
-              const gallery = document.querySelector(".gallery_cont");
-
-              let isOpen = false;
-
-              moreBtn.addEventListener("click", function (e) {
-                e.preventDefault();
-
-                if (!isOpen) {
-                  gallery.classList.add("active");
-                  moreBtn.innerText = "접기";
-                } else {
-                  gallery.classList.remove("active");
-                  moreBtn.innerText = "더보기";
-                }
-
-                isOpen = !isOpen;
-              });
-            </script>
 
             <script>
               document.addEventListener("DOMContentLoaded", function () {
@@ -594,14 +706,18 @@
                 }
 
                 /* =======================
-                  열기
+                  ⭐ 열기 (스크롤 잠금 추가)
                 ======================= */
                 validItems.forEach((item, index) => {
                   item.addEventListener("click", function (e) {
                     e.preventDefault();
                     currentIndex = index + 1;
                     updateSlide(false);
+
                     lightbox.style.display = "flex";
+
+                    // ✅ 핵심: 스크롤 막기
+                    document.body.classList.add("no-scroll");
                   });
                 });
 
@@ -636,21 +752,26 @@
                 });
 
                 /* =======================
-                  닫기
+                  ⭐ 닫기 (스크롤 복구)
                 ======================= */
-                closeBtn.addEventListener("click", () => {
+                function closeLightbox() {
                   lightbox.style.display = "none";
-                });
+
+                  // ✅ 핵심: 스크롤 다시 허용
+                  document.body.classList.remove("no-scroll");
+                }
+
+                closeBtn.addEventListener("click", closeLightbox);
 
                 lightbox.addEventListener("click", (e) => {
                   if (e.target === lightbox) {
-                    lightbox.style.display = "none";
+                    closeLightbox();
                   }
                 });
 
                 document.addEventListener("keydown", (e) => {
                   if (e.key === "Escape") {
-                    lightbox.style.display = "none";
+                    closeLightbox();
                   }
                 });
 
@@ -672,7 +793,6 @@
 
                   updateSlide();
 
-                  // 경계 처리
                   if (currentIndex === images.length + 1) {
                     setTimeout(() => {
                       currentIndex = 1;
@@ -704,18 +824,40 @@
           <!-- sec06 오시는길 -->
           <section class="sec06 contact">
             <div class="title">
-              <h2 class="ani_O t-delay0_3">location</h2>
+              <h2 class="ani_O t-delay0_3">Location</h2>
 
               <p class="ani_O t-delay0_4">
                 서울 강서구 공항대로36길 57 <span>더뉴컨벤션웨딩 2층</span>
 
-                <a href="https://place.map.kakao.com/26314220">
+                <a href="#" id="copyBtn">
                   <i class="fa fa-clone" aria-hidden="true"></i>
                 </a>
               </p>
+
+              <div id="toast">주소가 복사되었습니다!</div>
             </div>
 
-            <div class="map">
+            <script>
+              const textToCopy = "서울 강서구 공항대로36길 57";
+              const copyBtn = document.getElementById("copyBtn");
+              const toast = document.getElementById("toast");
+
+              copyBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                  // 토스트 보여주기
+                  toast.classList.add("show");
+
+                  // 2초 후 사라짐
+                  setTimeout(() => {
+                    toast.classList.remove("show");
+                  }, 2000);
+                });
+              });
+            </script>
+
+            <div class="map ani t-delay0_4">
               <div
                 id="daumRoughmapContainer1776268335502"
                 class="root_daum_roughmap root_daum_roughmap_landing"
@@ -737,14 +879,16 @@
               </script>
             </div>
 
-            <div class="contact_items">
+            <div class="contact_items ani t-delay0_5">
               <!-- 자차 -->
               <div class="desc">
                 <div class="item item01">
                   <h3><i class="fa fa-car" aria-hidden="true"></i> 자차</h3>
                   <p>
-                    내비게이션 : "더뉴컨벤션웨딩홀" 검색<br />
-                    서울 강서구 공항대로36길 57 더뉴컨벤션웨딩
+                    <span>
+                      내비게이션 : "더뉴컨벤션웨딩홀" 검색<br />
+                      서울 강서구 공항대로36길 57 더뉴컨벤션웨딩
+                    </span>
                   </p>
 
                   <div class="contact_btns">
@@ -753,14 +897,23 @@
                       class="btns"
                       target="_blank"
                     >
+                      <img src="img/kakao_navi.png" alt="" />
                       <span>카카오맵</span>
                     </a>
                     <a
-                      href="tmap://search?name=더뉴컨벤션&address=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EC%84%9C%EA%B5%AC%20%EA%B3%B5%ED%95%AD%EB%8C%80%EB%A1%9C36%EA%B8%B8%2057%20%EB%8D%94%EB%89%B4%EC%BB%A8%EB%B2%A4%EC%85%98%EC%9B%A8%EB%94%A9%ED%99%80"
+                      href="https://tmap.life/dc025d23"
+                      class="btns"
+                      target="_blank"
                     >
+                      <img src="img/t_map.png" alt="" />
                       <span>티맵</span>
                     </a>
-                    <a href="" class="btns" target="_blank">
+                    <a
+                      href="https://naver.me/5UEc8GRX"
+                      class="btns btns3"
+                      target="_blank"
+                    >
+                      <img src="img/naver_map.png" alt="" />
                       <span>네이버지도</span>
                     </a>
                   </div>
@@ -770,16 +923,16 @@
                 <div class="item item02">
                   <h3><i class="fa fa-bus" aria-hidden="true"></i> 버스</h3>
                   <p>
-                    발산역.우장산힐스테이트 방향<br />
+                    <span>발산역.우장산힐스테이트 방향</span>
                     652, 661, N64, 6659, 6630, 6642, 6648, 6657
                   </p>
                   <p>
-                    발산역(중)<br />
+                    <span>발산역(중)</span>
                     601, 605, 654, 6630, 6633, 6645, 6712, 60, 60-3, 3000,
                     3000-1, 8000, 6003
                   </p>
                   <p>
-                    이대서울병원<br />
+                    <span>이대서울병원</span>
                     6629, 6648
                   </p>
                 </div>
@@ -789,7 +942,7 @@
                   <h3>
                     <i class="fa fa-subway" aria-hidden="true"></i> 지하철
                   </h3>
-                  <p>5호선 발산역 하차 7번 출구(도보 5분)</p>
+                  <p><span>5호선 발산역 하차 7번 출구(도보 5분)</span></p>
                 </div>
 
                 <!-- 주차 -->
@@ -798,9 +951,9 @@
                     <i class="fa fa-product-hunt" aria-hidden="true"></i> 주차
                   </h3>
                   <p>
-                    더뉴컨벤션웨딩홀 주차장 : 하객 2시간 무료(이후 10분당
-                    1,000원) <br />
-                    웨딩홀 만차 시 이대병원 주차장 이용 가능
+                    <span>더뉴컨벤션웨딩홀 주차장</span> : 하객 2시간 무료(이후
+                    10분당 1,000원) <br />
+                    ※ 웨딩홀 만차 시 이대병원 주차장 이용 가능
                   </p>
                 </div>
               </div>
@@ -808,12 +961,283 @@
           </section>
 
           <!-- sec07 계좌 -->
-          <section class="sec07 account"></section>
-        </main>
+          <section class="sec07 account">
+            <div class="title">
+              <h2 class="ani_O t-delay0_3">Account</h2>
 
-        <!-- footer finish -->
-        <footer class="footer finish" id="common"></footer>
+              <p class="ani_O t-delay0_4">마음 전하실 곳.</p>
+
+              <span class="ani_O t-delay0_5">
+                직접 뵙지 못하는 아쉬운 마음을 대신하여<br />
+                축복의 인사를 전하고자 하시는 분들을 위해 계좌번호를
+                남깁니다.<br />
+                너른 마음으로 양해해 주시는 그 따뜻한 격려와 소중한 정성을<br />
+                깊이 간직하며 서로 아끼고 배려하며 행복하게 잘 살겠습니다.<br />
+                감사합니다.
+              </span>
+            </div>
+
+            <div class="desc">
+              <div class="items ani t-delay0_6">
+                <div class="top_name">
+                  <h3>신랑측에게</h3>
+                  <span class="arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+                <ul>
+                  <li class="account_item account_item01">
+                    <h4>신랑<span>박종복</span></h4>
+
+                    <div class="copy">
+                      카카오뱅크 3333060881511
+
+                      <a href="#" class="account_copyBtn">
+                        <i class="fa fa-clone" aria-hidden="true"></i>
+                        복사
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="account_item account_item02">
+                    <h4>아버지<span>박갑수</span></h4>
+
+                    <div class="copy">
+                      우체국 60118702067415
+
+                      <a href="#" class="account_copyBtn">
+                        <i class="fa fa-clone" aria-hidden="true"></i>
+                        복사
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="account_item account_item03">
+                    <h4>어머니<span>노영미</span></h4>
+
+                    <div class="copy">
+                      농협은행 3561029986933
+
+                      <a href="#" class="account_copyBtn">
+                        <i class="fa fa-clone" aria-hidden="true"></i>
+                        복사
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="items ani t-delay0_7">
+                <div class="top_name">
+                  <h3>신부측에게</h3>
+                  <span class="arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <ul>
+                  <li class="account_item account_item04">
+                    <h4>신부<span>신지수</span></h4>
+
+                    <div class="copy">
+                      수협은행 001092095337
+
+                      <a href="#" class="account_copyBtn">
+                        <i class="fa fa-clone" aria-hidden="true"></i>
+                        복사
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="account_item account_item05">
+                    <h4>아버지<span>신명준</span></h4>
+
+                    <div class="copy">
+                      카카오뱅크 3333111199828
+
+                      <a href="#" class="account_copyBtn">
+                        <i class="fa fa-clone" aria-hidden="true"></i>
+                        복사
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="account_item account_item06">
+                    <h4>어머니<span>오세연</span></h4>
+
+                    <div class="copy">
+                      우리은행 321302999502201
+
+                      <a href="#" class="account_copyBtn">
+                        <i class="fa fa-clone" aria-hidden="true"></i>
+                        복사
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const accountItems =
+                  document.querySelectorAll(".account .items");
+
+                accountItems.forEach((item) => {
+                  const header = item.querySelector(".top_name");
+
+                  header.addEventListener("click", () => {
+                    item.classList.toggle("active");
+                  });
+                });
+              });
+            </script>
+          </section>
+
+          <!-- footer -->
+          <section class="footer finish">
+            <div class="title">
+              <span>
+                서로의 다름을 존중하고 닮음을 기뻐하며, <br />
+                보내주신 축복을 소중히 간직하며 예쁘게 잘 살겠습니다.
+              </span>
+
+              <img src="img/foot_po.png" alt="" />
+
+              <h3>박종복 <span>♥</span> 신지수</h3>
+            </div>
+
+            <div class="link_box">
+              <a href="#"
+                ><img src="img/kakao.png" alt="" />카카오톡 공유하기</a
+              >
+              <a href="#"><img src="img/link.png" alt="" />링크 복사하기</a>
+            </div>
+          </section>
+        </main>
       </div>
     </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // ✅ 우클릭 방지
+        document.addEventListener("contextmenu", function (e) {
+          e.preventDefault();
+          return false;
+        });
+
+        // ✅ PC: 개발자도구/스크린샷 단축키 차단 (화면 변경 없이 조용히 차단)
+        document.addEventListener("keydown", function (e) {
+          // F12
+          if (e.key === "F12" || e.keyCode === 123) {
+            e.preventDefault();
+            return false;
+          }
+          // Ctrl+Shift+I
+          if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i")) {
+            e.preventDefault();
+            return false;
+          }
+          // Ctrl+Shift+J
+          if (e.ctrlKey && e.shiftKey && (e.key === "J" || e.key === "j")) {
+            e.preventDefault();
+            return false;
+          }
+          // Ctrl+Shift+C
+          if (e.ctrlKey && e.shiftKey && (e.key === "C" || e.key === "c")) {
+            e.preventDefault();
+            return false;
+          }
+          // Ctrl+U (소스보기)
+          if (e.ctrlKey && (e.key === "U" || e.key === "u")) {
+            e.preventDefault();
+            return false;
+          }
+          // Ctrl+S (저장)
+          if (e.ctrlKey && (e.key === "S" || e.key === "s")) {
+            e.preventDefault();
+            return false;
+          }
+          // Ctrl+P (인쇄)
+          if (e.ctrlKey && (e.key === "P" || e.key === "p")) {
+            e.preventDefault();
+            return false;
+          }
+          // PrintScreen
+          if (e.key === "PrintScreen" || e.keyCode === 44) {
+            e.preventDefault();
+            navigator.clipboard.writeText("").catch(function () {});
+            return false;
+          }
+          // Ctrl+Shift+S (부분 캡쳐)
+          if (e.ctrlKey && e.shiftKey && (e.key === "S" || e.key === "s")) {
+            e.preventDefault();
+            return false;
+          }
+          // Mac: Cmd+Shift+3,4,5
+          if (
+            e.metaKey &&
+            e.shiftKey &&
+            (e.key === "3" || e.key === "4" || e.key === "5")
+          ) {
+            e.preventDefault();
+            return false;
+          }
+        });
+
+        // PrintScreen 키 뗄 때 클립보드 비우기
+        document.addEventListener("keyup", function (e) {
+          if (e.key === "PrintScreen" || e.keyCode === 44) {
+            navigator.clipboard.writeText("").catch(function () {});
+          }
+        });
+
+        // ✅ 드래그 방지
+        document.addEventListener("dragstart", function (e) {
+          e.preventDefault();
+          return false;
+        });
+
+        // ✅ 복사 방지
+        document.addEventListener("copy", function (e) {
+          e.preventDefault();
+          return false;
+        });
+
+        // ✅ 모바일: 핀치 줌 방지
+        document.addEventListener(
+          "touchstart",
+          function (e) {
+            if (e.touches.length > 1) {
+              e.preventDefault();
+            }
+          },
+          { passive: false },
+        );
+
+        // 더블탭 줌 방지
+        var lastTouchEnd = 0;
+        document.addEventListener(
+          "touchend",
+          function (e) {
+            var now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+              e.preventDefault();
+            }
+            lastTouchEnd = now;
+          },
+          { passive: false },
+        );
+
+        // iOS 제스처 줌 방지
+        document.addEventListener("gesturestart", function (e) {
+          e.preventDefault();
+        });
+        document.addEventListener("gesturechange", function (e) {
+          e.preventDefault();
+        });
+        document.addEventListener("gestureend", function (e) {
+          e.preventDefault();
+        });
+      })();
+    </script>
   </body>
 </html>
