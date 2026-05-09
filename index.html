@@ -93,7 +93,11 @@
         <main class="main wrapper">
           <!-- sec01 비주얼 -->
           <section class="sec01 visual">
-            <div class="bgm"></div>
+            <div class="bgm">▶</div>
+
+            <audio id="bgmAudio" loop>
+              <source src="img/music.mp3" type="audio/mpeg" />
+            </audio>
 
             <div class="title">
               <strong>2026.06.27 SAT 12:10 PM</strong>
@@ -103,7 +107,41 @@
               </h2>
               <p>신랑 박종복 ♥ 신부 신지수</p>
             </div>
+
+            <div class="title02">
+              <p>2026년 6월 27일 토요일, 오후 12시 10분</p>
+              <strong>더뉴컨벤션, 2층 더뉴홀</strong>
+            </div>
           </section>
+
+          <script>
+            // 요소 선택
+            const bgmBtn = document.querySelector(".bgm");
+            const bgmAudio = document.getElementById("bgmAudio");
+
+            // 시작 상태 = 음악 재생중
+            let isPlaying = true;
+
+            // 페이지 로드 시 자동 재생
+            window.addEventListener("load", () => {
+              bgmAudio.play();
+            });
+
+            // 클릭 이벤트
+            bgmBtn.addEventListener("click", () => {
+              if (isPlaying) {
+                bgmAudio.pause();
+                bgmBtn.classList.add("off");
+                bgmBtn.innerHTML = '<img src="img/off.png" alt="ON">';
+              } else {
+                bgmAudio.play();
+                bgmBtn.classList.remove("off");
+                bgmBtn.innerHTML = "▶";
+              }
+
+              isPlaying = !isPlaying;
+            });
+          </script>
 
           <!-- sec02 인사말 -->
           <section class="sec02 greeting">
@@ -191,186 +229,34 @@
 
               <div class="top ani t-delay0_3">
                 <span>
-                  두 사람이 한 사람보다 나음은 그들이 수고함으로<br />
-                  좋은 상을 얻을 것임이라 한 사람이면 패하겠거니와<br />
-                  두 사람이면 맞설 수 있나니
+                  사랑하는 자가 내게 말하여 이르기를 나의 사랑,<br />
+                  나의 어여쁜 자야 일어나서 함께 가자
                 </span>
-                <strong>전도서 4장 9 ~ 12절 중 일부</strong>
+                <strong>아가서 2:10</strong>
               </div>
 
               <div class="line ani t-delay0_4"></div>
 
               <div class="btm">
                 <span class="ani t-delay0_5">
-                  저희 두 사람이 함께하는 새로운 시작에<br />
-                  귀한 발검음으로 축복해 주시면 감사하겠습니다.
+                  눈부신 햇살 아래, 두 사람이 하나 되어 사랑을 약속합니다.<br />
+                  저희 두 사람이 함께하는 뜨거운 계절의 새로운 시작에<br />
+                  귀한 발걸음으로 축복해 주시면 감사하겠습니다.
                 </span>
                 <h2 class="ani t-delay0_6">
                   <span style="color: rgb(135 135 231)">신랑</span> 박종복 ㆍ
-                  <span style="color: rgb(230, 123, 123); margin-left: 3px"
-                    >신부</span
-                  >
+                  <span style="color: rgb(230, 123, 123); margin-left: 3px">
+                    신부
+                  </span>
                   신지수
                 </h2>
               </div>
             </div>
           </section>
 
-          <!-- sec03 연락 -->
-          <section class="sec03 liaison">
-            <div class="title">
-              <h2 class="ani_O t-delay0_3">liaison</h2>
-
-              <p class="ani_O t-delay0_4">전화로 축하 인사하기</p>
-
-              <span class="ani_O t-delay0_5">
-                축하 인사를 전하실 분들을 위해 연락처를 남깁니다.<br />
-                신랑·신부와 부모님께 편하게 연락해 주세요.<br />
-                여러분께서 보내주시는 소중한 마음,<br />
-                깊이 간직하며 행복하게 잘 살겠습니다.
-              </span>
-            </div>
-
-            <div class="desc">
-              <div class="items ani t-delay0_6">
-                <div class="top_name">
-                  <h3>신랑측</h3>
-                  <span class="arrow"><i class="fa fa-chevron-down"></i></span>
-                </div>
-
-                <ul>
-                  <li class="liaison_item liaison_item01">
-                    <h4>신랑<span>박종복</span></h4>
-
-                    <div class="copy">
-                      <a href="tel:01042903048" class="liaison_copyBtn">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                      </a>
-
-                      <a
-                        href="sms:01042903048?body=결혼 축하드립니다!"
-                        class="liaison_copyBtn"
-                      >
-                        <i class="fa fa-comments" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </li>
-
-                  <li class="liaison_item liaison_item02">
-                    <h4>아버지<span>박갑수</span></h4>
-
-                    <div class="copy">
-                      <a href="tel:01022023048" class="liaison_copyBtn">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                      </a>
-
-                      <a
-                        href="sms:01022023048?body=결혼 축하드립니다!"
-                        class="liaison_copyBtn"
-                      >
-                        <i class="fa fa-comments" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </li>
-
-                  <li class="liaison_item liaison_item03">
-                    <h4>어머니<span>노영미</span></h4>
-
-                    <div class="copy">
-                      <a href="tel:01057104982" class="liaison_copyBtn">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                      </a>
-
-                      <a
-                        href="sms:01057104982?body=결혼 축하드립니다!"
-                        class="liaison_copyBtn"
-                      >
-                        <i class="fa fa-comments" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="items ani t-delay0_7">
-                <div class="top_name">
-                  <h3>신부측</h3>
-                  <span class="arrow"><i class="fa fa-chevron-down"></i></span>
-                </div>
-                <ul>
-                  <li class="liaison_item liaison_item04">
-                    <h4>신부<span>신지수</span></h4>
-
-                    <div class="copy">
-                      <a href="tel:01092095337" class="liaison_copyBtn">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                      </a>
-
-                      <a
-                        href="sms:01092095337?body=결혼 축하드립니다!"
-                        class="liaison_copyBtn"
-                      >
-                        <i class="fa fa-comments" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </li>
-
-                  <li class="liaison_item liaison_item05">
-                    <h4>아버지<span>신명준</span></h4>
-
-                    <div class="copy">
-                      <a href="tel:01057579943" class="liaison_copyBtn">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                      </a>
-
-                      <a
-                        href="sms:01057579943?body=결혼 축하드립니다!"
-                        class="liaison_copyBtn"
-                      >
-                        <i class="fa fa-comments" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </li>
-
-                  <li class="liaison_item liaison_item06">
-                    <h4>어머니<span>오세연</span></h4>
-
-                    <div class="copy">
-                      <a href="tel:01030305716" class="liaison_copyBtn">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                      </a>
-
-                      <a
-                        href="sms:01030305716?body=결혼 축하드립니다!"
-                        class="liaison_copyBtn"
-                      >
-                        <i class="fa fa-comments" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                const liaisonItems =
-                  document.querySelectorAll(".liaison .items");
-
-                liaisonItems.forEach((item) => {
-                  const header = item.querySelector(".top_name");
-
-                  header.addEventListener("click", () => {
-                    item.classList.toggle("active");
-                  });
-                });
-              });
-            </script>
-          </section>
-
-          <!-- sec04 달력 -->
-          <section class="sec04 calendar">
-            <div class="banner01 ani_O t-delay0_2"></div>
+          <!-- sec03 달력 -->
+          <section class="sec03 calendar">
+            <!-- <div class="banner01 ani_O t-delay0_2"></div> -->
 
             <div class="calendar_cont">
               <div class="title">
@@ -492,7 +378,163 @@
               </script>
             </div>
 
-            <div class="banner02 ani_O t-delay0_4"></div>
+            <!-- <div class="banner02 ani_O t-delay0_4"></div> -->
+          </section>
+
+          <!-- sec04 연락 -->
+          <section class="sec04 liaison">
+            <div class="title">
+              <h2 class="ani_O t-delay0_3">liaison</h2>
+
+              <p class="ani_O t-delay0_4">전화로 축하 인사하기</p>
+
+              <span class="ani_O t-delay0_5">
+                축하 인사를 전하실 분들을 위해 연락처를 남깁니다.<br />
+                신랑·신부와 부모님께 편하게 연락해 주세요.
+              </span>
+            </div>
+
+            <div class="liaison_infor ani t-delay0_3">
+              <h3>박갑수ㆍ노영미<span>의 &nbsp;아들</span>박종복</h3>
+              <h3>
+                신명준ㆍ오세연<span>의 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;딸</span
+                >신지수
+              </h3>
+            </div>
+
+            <div class="desc">
+              <div class="items items01 ani t-delay0_6">
+                <div class="top_name">
+                  <h3>축하 연락하기</h3>
+                  <span class="arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+                <ul class="liaison_desc liaison_desc01">
+                  <li class="liaison_item list_name"><span>신랑측</span></li>
+
+                  <li class="liaison_item">
+                    <h4>신랑<span>박종복</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01042903048" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01042903048?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="liaison_item">
+                    <h4>신랑 아버지<span>박갑수</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01022023048" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01022023048?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="liaison_item">
+                    <h4>신랑 어머니<span>노영미</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01057104982" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01057104982?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+
+                <ul class="liaison_desc liaison_desc02">
+                  <li class="liaison_item list_name"><span>신부측</span></li>
+
+                  <li class="liaison_item">
+                    <h4>신부<span>신지수</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01092095337" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01092095337?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="liaison_item">
+                    <h4>신부 아버지<span>신명준</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01057579943" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01057579943?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="liaison_item">
+                    <h4>신부 어머니<span>오세연</span></h4>
+
+                    <div class="copy">
+                      <a href="tel:01030305716" class="liaison_copyBtn">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </a>
+
+                      <a
+                        href="sms:01030305716?body=결혼 축하드립니다!"
+                        class="liaison_copyBtn"
+                      >
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const liaisonItems =
+                  document.querySelectorAll(".liaison .items");
+
+                liaisonItems.forEach((item) => {
+                  const header = item.querySelector(".top_name");
+
+                  header.addEventListener("click", () => {
+                    item.classList.toggle("active");
+                  });
+                });
+              });
+            </script>
           </section>
 
           <!-- sec05 갤러리 -->
@@ -883,14 +925,6 @@
               <!-- 자차 -->
               <div class="desc">
                 <div class="item item01">
-                  <h3><i class="fa fa-car" aria-hidden="true"></i> 자차</h3>
-                  <p>
-                    <span>
-                      내비게이션 : "더뉴컨벤션웨딩홀" 검색<br />
-                      서울 강서구 공항대로36길 57 더뉴컨벤션웨딩
-                    </span>
-                  </p>
-
                   <div class="contact_btns">
                     <a
                       href="https://kko.to/PDTqTkK4Lo"
@@ -898,7 +932,7 @@
                       target="_blank"
                     >
                       <img src="img/kakao_navi.png" alt="" />
-                      <span>카카오맵</span>
+                      <span>카카오내비</span>
                     </a>
                     <a
                       href="https://tmap.life/dc025d23"
@@ -917,6 +951,14 @@
                       <span>네이버지도</span>
                     </a>
                   </div>
+
+                  <h3><i class="fa fa-car" aria-hidden="true"></i> 자차</h3>
+                  <p>
+                    <span>
+                      내비게이션 : "더뉴컨벤션웨딩홀" 검색<br />
+                      서울 강서구 공항대로36길 57 더뉴컨벤션웨딩
+                    </span>
+                  </p>
                 </div>
 
                 <!-- 버스 -->
@@ -928,8 +970,10 @@
                   </p>
                   <p>
                     <span>발산역(중)</span>
-                    601, 605, 654, 6630, 6633, 6645, 6712, 60, 60-3, 3000,
-                    3000-1, 8000, 6003
+                    601, 605, 654, 6630, 6633, 6645, 6712, 60, 60-3,<br
+                      class="mo_br"
+                    />
+                    3000, 3000-1, 8000, 6003
                   </p>
                   <p>
                     <span>이대서울병원</span>
@@ -951,8 +995,8 @@
                     <i class="fa fa-product-hunt" aria-hidden="true"></i> 주차
                   </h3>
                   <p>
-                    <span>더뉴컨벤션웨딩홀 주차장</span> : 하객 2시간 무료(이후
-                    10분당 1,000원) <br />
+                    <span>더뉴컨벤션웨딩홀 주차장</span> : 하객 2시간 무료
+                    <br class="mo_br" />(이후 10분당 1,000원) <br />
                     ※ 웨딩홀 만차 시 이대병원 주차장 이용 가능
                   </p>
                 </div>
@@ -968,19 +1012,19 @@
               <p class="ani_O t-delay0_4">마음 전하실 곳.</p>
 
               <span class="ani_O t-delay0_5">
-                직접 뵙지 못하는 아쉬운 마음을 대신하여<br />
-                축복의 인사를 전하고자 하시는 분들을 위해 계좌번호를
-                남깁니다.<br />
-                너른 마음으로 양해해 주시는 그 따뜻한 격려와 소중한 정성을<br />
-                깊이 간직하며 서로 아끼고 배려하며 행복하게 잘 살겠습니다.<br />
-                감사합니다.
+                멀리서도 축하의 마음을 전하고 싶으신 분들을 위해<br />
+                계좌번호를 안내드립니다.<br /><br />
+
+                소중한 축하를 보내주셔서 감사드리며,<br />
+                따뜻한 마음에 깊이 감사드립니다.
               </span>
             </div>
 
             <div class="desc">
-              <div class="items ani t-delay0_6">
+              <div class="items items01 ani t-delay0_6">
                 <div class="top_name">
-                  <h3>신랑측에게</h3>
+                  <h3 style="color: rgb(135 135 231)">신랑측</h3>
+
                   <span class="arrow"><i class="fa fa-chevron-down"></i></span>
                 </div>
 
@@ -999,7 +1043,7 @@
                   </li>
 
                   <li class="account_item account_item02">
-                    <h4>아버지<span>박갑수</span></h4>
+                    <h4>신랑 아버지<span>박갑수</span></h4>
 
                     <div class="copy">
                       우체국 60118702067415
@@ -1012,7 +1056,7 @@
                   </li>
 
                   <li class="account_item account_item03">
-                    <h4>어머니<span>노영미</span></h4>
+                    <h4>신랑 어머니<span>노영미</span></h4>
 
                     <div class="copy">
                       농협은행 3561029986933
@@ -1026,9 +1070,10 @@
                 </ul>
               </div>
 
-              <div class="items ani t-delay0_7">
+              <div class="items items02 ani t-delay0_7">
                 <div class="top_name">
-                  <h3>신부측에게</h3>
+                  <h3 style="color: rgb(230, 123, 123)">신부측</h3>
+
                   <span class="arrow"><i class="fa fa-chevron-down"></i></span>
                 </div>
                 <ul>
@@ -1046,7 +1091,7 @@
                   </li>
 
                   <li class="account_item account_item05">
-                    <h4>아버지<span>신명준</span></h4>
+                    <h4>신부 아버지<span>신명준</span></h4>
 
                     <div class="copy">
                       카카오뱅크 3333111199828
@@ -1059,7 +1104,7 @@
                   </li>
 
                   <li class="account_item account_item06">
-                    <h4>어머니<span>오세연</span></h4>
+                    <h4>신부 어머니<span>오세연</span></h4>
 
                     <div class="copy">
                       우리은행 321302999502201
@@ -1114,7 +1159,7 @@
       </div>
     </div>
 
-    <script>
+    <!-- <script>
       (function () {
         "use strict";
 
@@ -1238,6 +1283,6 @@
           e.preventDefault();
         });
       })();
-    </script>
+    </script> -->
   </body>
 </html>
