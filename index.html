@@ -93,14 +93,14 @@
         <main class="main wrapper">
           <!-- sec01 비주얼 -->
           <section class="sec01 visual">
-            <div class="bgm">▶</div>
+            <div class="bgm"><img src="img/off.png" alt="" /></div>
 
             <audio id="bgmAudio" loop>
               <source src="music/music.mp3" type="audio/mpeg" />
             </audio>
 
             <div class="title">
-              <strong>2026.06.27 SAT 12:10 PM</strong>
+              <!-- <strong>2026.06.27 SAT 12:10 PM</strong> -->
               <h2>
                 We are <br />
                 getting married
@@ -132,11 +132,11 @@
               if (isPlaying) {
                 bgmAudio.pause();
                 bgmBtn.classList.add("off");
-                bgmBtn.innerHTML = '<img src="img/off.png" alt="ON">';
+                bgmBtn.innerHTML = "▶";
               } else {
                 bgmAudio.play();
                 bgmBtn.classList.remove("off");
-                bgmBtn.innerHTML = "▶";
+                bgmBtn.innerHTML = '<img src="img/off.png" alt="ON">';
               }
 
               isPlaying = !isPlaying;
@@ -229,8 +229,8 @@
 
               <div class="top ani t-delay0_3">
                 <span>
-                  사랑하는 자가 내게 말하여 이르기를 나의 사랑,<br />
-                  나의 어여쁜 자야 일어나서 함께 가자
+                  나의 사랑하는 자가 내게 말하여 이르기를 나의 사랑,<br />
+                  내 어여쁜 자야 일어나서 함께 가자
                 </span>
                 <strong>아가서 2:10</strong>
               </div>
